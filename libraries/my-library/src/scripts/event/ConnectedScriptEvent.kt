@@ -19,7 +19,7 @@ import org.tribot.script.sdk.ScriptListening
  *
  *
  */
-open class ConnectedScriptEvent<T : Any> internal constructor(
+open class ConnectedScriptEvent<T : Any> @PublishedApi internal constructor(
     private val connector: (T) -> Unit,
     private val disconnector: (T) -> Unit,
     createTriggerListener: ScriptEventTriggerProvider<T>.() -> T
